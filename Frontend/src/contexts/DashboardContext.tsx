@@ -3,6 +3,7 @@ import { Roadmap, RoadmapFormData } from '@/types/roadmap';
 import { mapBackendRoadmap } from '@/utils/mapBackendRoadmap'
 import { createRoadmapFromSkillsAPI, getAllRoadmapsAPI, updateTopicAPI } from '@/api/roadmap.api'
 import { updateTopicData } from '@/types/RawBackend';
+import { log } from 'console';
 type DashboardView = 'empty' | 'input' | 'roadmap' | 'generating';
 
 interface DashboardContextType {
@@ -43,7 +44,7 @@ export function DashboardProvider({ children }: { children: ReactNode }) {
 
     try {
       const res = await getAllRoadmapsAPI();
-
+      console.log(res)
       if (!res.status) {
         throw new Error(res.error || 'Failed to load roadmaps');
       }

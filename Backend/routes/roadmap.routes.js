@@ -14,4 +14,7 @@ router.post('/create-from-resume',authMiddleware, upload.single('resume'),genrat
 router.post('/update-topic-data',authMiddleware,updateTopic);
 
 router.get('/get-all-roadmaps',authMiddleware,getRoadmaps)
+router.get('/health',(req,res)=>{
+    res.json({status: true})
+})
 module.exports = router;    

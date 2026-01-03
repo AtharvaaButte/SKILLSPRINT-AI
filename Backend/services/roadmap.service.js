@@ -36,11 +36,11 @@ async function getRoadmapsFrommDB(uid) {
         if (snapshot.empty) {            
             return [];
         }
-
+        
         const roadmaps = snapshot.docs.map((doc) => {
             return {
                 id: doc.id,
-                ...doc.data()
+                ...doc.data() 
             }
         })
 

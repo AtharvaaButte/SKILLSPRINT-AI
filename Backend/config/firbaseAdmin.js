@@ -1,10 +1,10 @@
-const admin = require('firebase-admin');
-const path = require('path')
+const admin = require("firebase-admin");
+const { getFirebaseConfig } = require("./env"); 
 
-const serviceAccount = require(path.join(__dirname,'key.json'));
-
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-});
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(getFirebaseConfig()),
+  });
+}
 
 module.exports = admin;
