@@ -1,11 +1,11 @@
 const {GoogleGenerativeAI} = require("@google/generative-ai");
-const {getGeminiAPiKey} = require("../config/env");
+const {getGeminiApiKey} = require("../config/env");
 const {getSysPrompt,formPromtFromSkill} = require("./prompt.service")
 
 async function genrateRoadmap(data) {
     try {
         
-        const genAI = new GoogleGenerativeAI(getGeminiAPiKey());
+        const genAI = new GoogleGenerativeAI(getGeminiApiKey());
         const model = genAI.getGenerativeModel({
         model: "gemini-2.5-flash",
         systemInstruction: getSysPrompt()
