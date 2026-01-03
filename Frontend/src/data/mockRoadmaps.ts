@@ -1,0 +1,198 @@
+import { Roadmap } from '@/types/roadmap';
+
+export const mockRoadmaps: Roadmap[] = [
+  {
+    id: '1',
+    title: 'Frontend Developer – 2 Months',
+    targetRole: 'Frontend Developer',
+    duration: '2 months',
+    createdAt: new Date('2024-01-15'),
+    overallFocus: 'Master modern frontend development with React, TypeScript, and responsive design principles.',
+    months: [
+      {
+        id: 'm1',
+        monthNumber: 1,
+        stageName: 'Foundations',
+        focusSummary: 'Build strong foundations in HTML, CSS, and JavaScript fundamentals.',
+        weeks: [
+          {
+            id: 'w1',
+            weekNumber: 1,
+            title: 'HTML & CSS Basics',
+            goal: 'Master semantic HTML and CSS layouts',
+            estimatedHours: 15,
+            assignment: 'Create a responsive landing page for a fictional product',
+            topics: [
+              { id: 't1', title: 'Semantic HTML elements', resourceUrl: 'https://developer.mozilla.org/en-US/docs/Web/HTML', resourceTitle: 'MDN HTML Guide', completed: true },
+              { id: 't2', title: 'CSS Box Model', resourceUrl: 'https://css-tricks.com/the-css-box-model/', resourceTitle: 'CSS Tricks', completed: true },
+              { id: 't3', title: 'Flexbox fundamentals', resourceUrl: 'https://flexboxfroggy.com/', resourceTitle: 'Flexbox Froggy', completed: false },
+              { id: 't4', title: 'CSS Grid basics', resourceUrl: 'https://cssgridgarden.com/', resourceTitle: 'Grid Garden', completed: false },
+            ],
+          },
+          {
+            id: 'w2',
+            weekNumber: 2,
+            title: 'JavaScript Essentials',
+            goal: 'Understand core JavaScript concepts',
+            estimatedHours: 18,
+            assignment: 'Build an interactive to-do list application',
+            topics: [
+              { id: 't5', title: 'Variables and data types', resourceUrl: 'https://javascript.info/types', resourceTitle: 'JavaScript.info', completed: false },
+              { id: 't6', title: 'Functions and scope', resourceUrl: 'https://javascript.info/function-basics', resourceTitle: 'JavaScript.info', completed: false },
+              { id: 't7', title: 'DOM manipulation', resourceUrl: 'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model', resourceTitle: 'MDN DOM Guide', completed: false },
+              { id: 't8', title: 'Event handling', resourceUrl: 'https://javascript.info/events', resourceTitle: 'JavaScript.info', completed: false },
+            ],
+          },
+          {
+            id: 'w3',
+            weekNumber: 3,
+            title: 'Advanced JavaScript',
+            goal: 'Master async programming and modern ES6+ features',
+            estimatedHours: 16,
+            assignment: 'Fetch and display data from a public API',
+            topics: [
+              { id: 't9', title: 'Promises and async/await', resourceUrl: 'https://javascript.info/async', resourceTitle: 'JavaScript.info', completed: false },
+              { id: 't10', title: 'Array methods (map, filter, reduce)', resourceUrl: 'https://javascript.info/array-methods', resourceTitle: 'JavaScript.info', completed: false },
+              { id: 't11', title: 'Destructuring and spread', resourceUrl: 'https://javascript.info/destructuring-assignment', resourceTitle: 'JavaScript.info', completed: false },
+            ],
+          },
+          {
+            id: 'w4',
+            weekNumber: 4,
+            title: 'Responsive Design',
+            goal: 'Create mobile-first responsive layouts',
+            estimatedHours: 14,
+            assignment: 'Make your landing page fully responsive',
+            topics: [
+              { id: 't12', title: 'Media queries', resourceUrl: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries', resourceTitle: 'MDN Media Queries', completed: false },
+              { id: 't13', title: 'Mobile-first approach', resourceUrl: 'https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/', resourceTitle: 'freeCodeCamp', completed: false },
+              { id: 't14', title: 'Responsive images', resourceUrl: 'https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images', resourceTitle: 'MDN Responsive Images', completed: false },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'm2',
+        monthNumber: 2,
+        stageName: 'React & Modern Tools',
+        focusSummary: 'Learn React framework, state management, and modern development tools.',
+        weeks: [
+          {
+            id: 'w5',
+            weekNumber: 1,
+            title: 'React Fundamentals',
+            goal: 'Understand React components and JSX',
+            estimatedHours: 18,
+            assignment: 'Build a component-based portfolio site',
+            topics: [
+              { id: 't15', title: 'Components and props', resourceUrl: 'https://react.dev/learn/your-first-component', resourceTitle: 'React Docs', completed: false },
+              { id: 't16', title: 'State and useState', resourceUrl: 'https://react.dev/learn/state-a-components-memory', resourceTitle: 'React Docs', completed: false },
+              { id: 't17', title: 'Handling events', resourceUrl: 'https://react.dev/learn/responding-to-events', resourceTitle: 'React Docs', completed: false },
+              { id: 't18', title: 'Conditional rendering', resourceUrl: 'https://react.dev/learn/conditional-rendering', resourceTitle: 'React Docs', completed: false },
+            ],
+          },
+          {
+            id: 'w6',
+            weekNumber: 2,
+            title: 'React Hooks',
+            goal: 'Master useEffect and custom hooks',
+            estimatedHours: 16,
+            assignment: 'Create a weather app with API integration',
+            topics: [
+              { id: 't19', title: 'useEffect for side effects', resourceUrl: 'https://react.dev/learn/synchronizing-with-effects', resourceTitle: 'React Docs', completed: false },
+              { id: 't20', title: 'Custom hooks', resourceUrl: 'https://react.dev/learn/reusing-logic-with-custom-hooks', resourceTitle: 'React Docs', completed: false },
+              { id: 't21', title: 'useContext for state', resourceUrl: 'https://react.dev/learn/passing-data-deeply-with-context', resourceTitle: 'React Docs', completed: false },
+            ],
+          },
+          {
+            id: 'w7',
+            weekNumber: 3,
+            title: 'TypeScript Basics',
+            goal: 'Add type safety to your React apps',
+            estimatedHours: 14,
+            assignment: 'Convert your weather app to TypeScript',
+            topics: [
+              { id: 't22', title: 'Basic types', resourceUrl: 'https://www.typescriptlang.org/docs/handbook/2/everyday-types.html', resourceTitle: 'TypeScript Docs', completed: false },
+              { id: 't23', title: 'Interfaces and types', resourceUrl: 'https://www.typescriptlang.org/docs/handbook/2/objects.html', resourceTitle: 'TypeScript Docs', completed: false },
+              { id: 't24', title: 'TypeScript with React', resourceUrl: 'https://react.dev/learn/typescript', resourceTitle: 'React Docs', completed: false },
+            ],
+          },
+          {
+            id: 'w8',
+            weekNumber: 4,
+            title: 'Build & Deploy',
+            goal: 'Learn modern build tools and deployment',
+            estimatedHours: 12,
+            assignment: 'Deploy your portfolio to production',
+            topics: [
+              { id: 't25', title: 'Vite configuration', resourceUrl: 'https://vitejs.dev/guide/', resourceTitle: 'Vite Docs', completed: false },
+              { id: 't26', title: 'Environment variables', resourceUrl: 'https://vitejs.dev/guide/env-and-mode.html', resourceTitle: 'Vite Docs', completed: false },
+              { id: 't27', title: 'Deployment with Vercel', resourceUrl: 'https://vercel.com/docs', resourceTitle: 'Vercel Docs', completed: false },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Data Analyst – 3 Months',
+    targetRole: 'Data Analyst',
+    duration: '3 months',
+    createdAt: new Date('2024-01-10'),
+    overallFocus: 'Develop data analysis skills with Python, SQL, and visualization tools.',
+    months: [
+      {
+        id: 'm3',
+        monthNumber: 1,
+        stageName: 'Python & Data Basics',
+        focusSummary: 'Learn Python programming and data manipulation fundamentals.',
+        weeks: [
+          {
+            id: 'w9',
+            weekNumber: 1,
+            title: 'Python Fundamentals',
+            goal: 'Master Python basics for data analysis',
+            estimatedHours: 10,
+            assignment: 'Complete Python basics coding challenges',
+            topics: [
+              { id: 't28', title: 'Python syntax and data types', resourceUrl: 'https://docs.python.org/3/tutorial/', resourceTitle: 'Python Docs', completed: true },
+              { id: 't29', title: 'Control flow and loops', resourceUrl: 'https://docs.python.org/3/tutorial/controlflow.html', resourceTitle: 'Python Docs', completed: true },
+              { id: 't30', title: 'Functions and modules', resourceUrl: 'https://docs.python.org/3/tutorial/modules.html', resourceTitle: 'Python Docs', completed: false },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: '3',
+    title: 'UX Designer – 6 Weeks',
+    targetRole: 'UX Designer',
+    duration: '6 weeks',
+    createdAt: new Date('2024-01-05'),
+    overallFocus: 'Learn user research, wireframing, and design principles.',
+    months: [
+      {
+        id: 'm4',
+        monthNumber: 1,
+        stageName: 'Design Foundations',
+        focusSummary: 'Understand UX principles and design thinking methodology.',
+        weeks: [
+          {
+            id: 'w10',
+            weekNumber: 1,
+            title: 'UX Principles',
+            goal: 'Learn core UX concepts',
+            estimatedHours: 12,
+            assignment: 'Conduct a UX audit of an existing app',
+            topics: [
+              { id: 't31', title: 'Design thinking process', resourceUrl: 'https://www.interaction-design.org/literature/article/what-is-design-thinking', resourceTitle: 'IxDF', completed: false },
+              { id: 't32', title: 'User research methods', resourceUrl: 'https://www.nngroup.com/articles/which-ux-research-methods/', resourceTitle: 'Nielsen Norman Group', completed: false },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];

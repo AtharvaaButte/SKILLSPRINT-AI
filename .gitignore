@@ -1,0 +1,23 @@
+# Root ignores (applies to entire repo)
+
+# Node
+node_modules/
+
+# Env
+.env
+.env.*
+
+# Logs
+logs
+*.log
+
+# Build outputs
+dist
+build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+Backend/config/key.json
