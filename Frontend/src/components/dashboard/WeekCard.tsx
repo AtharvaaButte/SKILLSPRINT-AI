@@ -105,7 +105,7 @@ export function WeekCard({ week, onTopicToggle }: WeekCardProps) {
       {isComplete && (
         <div className="mt-4 flex items-center gap-2 text-sm text-primary">
           <CheckCircle2 className="h-4 w-4" />
-          <span className="font-medium">Week completed! Great job!</span>
+          <span className="font-medium">{week.weekCompletationMsg}</span>
         </div>
       )}
     </div>

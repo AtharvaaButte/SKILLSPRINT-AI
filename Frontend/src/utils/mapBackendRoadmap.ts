@@ -70,7 +70,7 @@ export function mapBackendRoadmap(resRoadmap: BackendRoadmapResponse): Roadmap {
             goal: week.WeekGoal,
             assignment: week.WeeklyAssignment,
             estimatedHours: parseEstimatedHours(week.EstimatedEffort),
-
+            weekCompletationMsg: week.WeekCompletionMessage,
             topics: (week.Topics.Topic).map(
               (topic: RawTopic, topicIndex: number): Topic => ({
                 id: buildTopicId(

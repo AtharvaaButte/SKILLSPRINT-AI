@@ -81,27 +81,21 @@ export function DashboardProvider({ children }: { children: ReactNode }) {
   };
 
 const createRoadmap = async (data: RoadmapFormData) => {
-  // 1️⃣ Immediately show loading screen
   setCurrentView("generating");
 
   try {
-    // 2️⃣ Call backend
     const res = await createRoadmapFromSkillsAPI(data);
 
-    // 3️⃣ Validate backend response
     if (!res.status || !res.roadmap) {
       throw new Error(res.error || "Failed to create roadmap");
     }
 
-    // 4️⃣ Map backend data
     const newRoadmap = mapBackendRoadmap(res.roadmap);
 
-    // 5️⃣ Update state
     setRoadmaps((prev) => [newRoadmap, ...prev]);
     setSelectedRoadmap(newRoadmap);
     setSelectedMonthIndex(0);
 
-    // 6️⃣ Navigate to roadmap view
     setCurrentView("roadmap");
 
   } catch (error: any) {

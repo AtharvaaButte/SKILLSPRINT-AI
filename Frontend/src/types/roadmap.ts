@@ -20,6 +20,7 @@ export interface WeekData {
   topics: Topic[];
   assignment: string;
   estimatedHours: number;
+  weekCompletationMsg: string;
 }
 
 export interface MonthData {
