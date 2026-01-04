@@ -1,16 +1,6 @@
 import { useEffect, useState } from "react";
 import { GraduationCap, Flag } from "lucide-react";
 
-/**
- * Milestone labels
- */
-const milestones = [
-  "Basics",
-  "Core Skills",
-  "Practice",
-  "Projects",
-  "Job Ready",
-];
 
 /**
  * User-facing messages
@@ -140,7 +130,7 @@ export function RoadmapGenerating() {
         <p className="mt-4 text-center text-sm text-muted-foreground">
           Preparing roadmap for{" "}
           <span className="font-medium text-foreground">
-            Frontend Developer
+            Future Engineer
           </span>
         </p>
       </div>
